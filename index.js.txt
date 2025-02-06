@@ -1,0 +1,13 @@
+var express=require("express");
+var app=express(); //產生Express Application物件
+app.get("/", function(req, res){ //當使用者連線到伺服器的根目錄(/)時，做出回應
+	res.send("Hello <b> World</b>");
+});
+
+app.get("/mypath", function(req, res){ //當使用者連線到 /mypath 時，做出回應
+	res.send("This is my path.");
+});
+
+app.listen(3000, function(){
+	console.log("伺服器已經啟動在http://localhost:3000/");
+});

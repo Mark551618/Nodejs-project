@@ -2,9 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title> 日本京阪神旅遊 </title>
 
 <style type="text/css">
+    body{
+        background-color: rgb(209, 228, 209);
+    }
     .box {
         border: 1px solid #000000;
         width: 1000px;
@@ -39,18 +44,68 @@
         color: white;
     }
 
-    .doro {
-        border: 1px solid #000000;
-        width: 600px;
-        height: 400px;
-        margin: 80px 300px;
-
+    /* 圖片+超連結的區塊 */
+    .web {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 列 */
+        grid-template-rows: repeat(3, auto); /* 3 行 */
+        row-gap: 10px; /* 調整行距（上下間距） */
+        column-gap: 15px; /* 調整列距（左右間距） */
+        justify-items: center; /* 內容置中 */
+        width: 80%;
+        margin: 50px auto; /* 置中 */
     }
+
+    .web-item {
+        text-align: center;
+    }
+
+    .web-item img {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px; /* 圓角 */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 陰影 */
+    }
+
+    .web-item a {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #2d65dd;
+        font-weight: bold;
+    }
+
+    .japantravel{
+
+        margin-top: 10px;
+        font-size: 18px;
+        
+    }
+    .doro{
+        text-align: center;
+    }
+  
 </style>
+
+
+
 
 </head>
 
 <body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="product.html">需要購買的商品</a></li>
+            
+        </ul>
+    </nav>
+    
+    <h1>RE I AM</h1>
+    <audio id="myAudio" src="RE_I_AM.mp3" controls autoplay loop></audio>
+    
     <div id="box" class="box">
         <table>
             <thead>
@@ -172,8 +227,103 @@
         </table>
     </div>
     <div id="doro" class="doro">
-        <img src="doro.png" height="400" width="600">
-        <p>Doro~ Doro~</p>
+        <img src="doro_act1.gif" alt="動態圖片" width="300">
+        <img src="doro_act1.gif" alt="動態圖片" width="300">
+        <img src="doro_act1.gif" alt="動態圖片" width="300">
+        <img src="doro_act1.gif" alt="動態圖片" width="300">
     </div>
+    <!-- 3 行 2 列的圖片與超連結 -->
+    <div id="web" class="web">
+        <div class="web-item">
+            <img src="大阪自由行.png" alt="大阪自由行">
+            <a href="https://www.gltjp.com/zh-hant/article/item/20172/">大阪城周邊景點</a>
+        </div>
+
+        <div class="web-item">
+            <img src="大阪城周邊三十景點.png" alt="大阪城周邊三十景點">
+            <a href="https://www.kkday.com/zh-tw/blog/3525/asia-japan-osaka-must-visit">大阪城周邊三十景點統整</a>
+        </div>
+
+        <div class="web-item">
+            <img src="大阪一日遊攻略.png" alt="大阪一日遊攻略">
+            <a href="https://www.kkday.com/zh-tw/blog/3525/asia-japan-osaka-must-visit">大阪一日遊攻略</a>
+        </div>
+
+        <div class="web-item">
+            <img src="京都水族館.png" alt="京都水族館">
+            <a href="https://www.gltjp.com/zh-hant/directory/item/12008/">京都水族館</a>
+        </div>
+
+        <div class="web-item">
+            <img src="京都一日遊.png" alt="京都一日遊">
+            <a href="https://www.gltjp.com/zh-hant/article/item/20530/">京都一日遊</a>
+        </div>
+
+        <div class="web-item">
+            <img src="京都必去景點.png" alt="京都必去景點">
+            <a href="https://www.gltjp.com/zh-hant/article/item/20205/">京都必去景點</a>
+        </div>
+    </div>
+    <div id="japantravel" class="japantravel">
+        <pre><b>日本行 (估計 7 天)</b>
+            飛機 (從桃園飛往大阪關西機場)
+            關西機場 -> 通天閣 (南海機場線) (鐵路) (1小時)
+
+            住宿
+            安排在難波周邊 (下地鐵放行李) (關西機場 → 難波(特急Rapi:t&空港急行）))
+            <hr>
+            <b>大阪</b>
+            從難波往大阪城 (搭乘京都地鐵 Osaka metro 從難波御堂筋線紅線 -> 中央線本町 -> 中央線谷町四丁目站) 步行到大阪城
+
+            小型景點
+
+            通天閣 | 天王寺動物園 (走路 3 分鐘) (約2~3小時就看完) | 四天王寺(外觀造型獨特) (1 天) 從難波御堂筋線紅線 -> 天王寺站紅線
+
+            難波八阪神社、臨空城Outlet、心齋橋(逛街) | 道頓堀(潮流服飾)、黑門市場(海鮮市場)(1天)
+            從難波御堂筋線紅線 -> 心齋橋站紅線
+
+            天神橋筋商店街(藥妝店) (千日線(粉色線)日本橋 -> 堺筋線(棕色線)(K12 扇町))
+            <hr>
+
+            大阪難波站 -> 近鐵奈良線(火車)-> 終點奈良車站 (車程約 50 分鐘)
+
+            奈良公園(奈良神社)
+
+            京都住宿規劃：
+
+            大阪住 2025_2_17 ~ 2025_2_20
+
+            住所：
+            大阪新今宮 2 號店
+
+            網路訂房 可以參考樂天 JANLAN
+            <hr>
+            <b>京都</b>
+            
+            京都伏見稻荷神社(考量)
+
+            京都水族館 (大力推薦)
+
+            音羽山 清水寺
+
+            八坂神社
+
+            花見小路 (日本藝妓)
+
+            京都神奇寶貝中心
+
+            京都一日遊
+
+            京都必去景點
+        </pre>
+    </div>
+
+    <script>
+        // 取得 audio 元素
+        let audio = document.getElementById("myAudio");
+    
+        // 設定預設音量為 30%
+        audio.volume = 0.3;
+    </script>
 </body>
 </html>

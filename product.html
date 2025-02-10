@@ -8,10 +8,24 @@
         body{
                 background-color: rgb(209, 228, 209);
         }
+
+        .btn-red {
+            font-size: 20px; /* 放大字體 */
+            padding: 10px 20px; /* 增加按鈕大小 */
+            background-color: red; /* 設定背景為紅色 */
+            color: white; /* 文字顏色為白色 */
+            border: none; /* 移除邊框 */
+            border-radius: 10px; /* 圓角邊框 */
+            cursor: pointer; /* 滑鼠移過去變成手指 */
+        }
+
+        .btn-red:hover {
+            background-color: darkred; /* 滑鼠懸停時變深紅色 */
+        }
     </style>    
 </head>
 <body>
-    <h1>需要購買商品</h1>
+    
     <nav>
         <ul>
             <li><a href="index.html">首頁</a></li>
@@ -20,10 +34,11 @@
         </ul>
     </nav>
 
-    <h1>中華一番_只要有你在</h1>
-    <audio id="myAudio" src="中華一番_只要有你在.mp3" controls autoplay loop></audio>
+    <h1>歌曲: 米津玄師_LOSER</h1>
+    <audio id="myAudio" src="米津玄師_LOSER.mp3" controls loop></audio>
+    <button class="btn-red" id="playBtn">點我可以循環播放音樂</button>
     
-
+    <h1>需要購買商品</h1>
     <div>
         <table>
                 <thead>
@@ -57,11 +72,11 @@
     </div>
 
     <script>
-        // 取得 audio 元素
-        let audio = document.getElementById("myAudio");
-    
-        // 設定預設音量為 30%
-        audio.volume = 0.3;
+        document.getElementById("playBtn").addEventListener("click", () => {
+        const audio = document.getElementById("myAudio");
+        audio.volume = 0.1; // 設定音量為 10%
+        audio.play();
+        });
     </script>
 </body>
 </html>

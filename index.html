@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title> 日本京阪神旅遊 </title>
@@ -10,19 +10,21 @@
     body{
         background-color: rgb(209, 228, 209);
     }
+    
     .box {
         border: 1px solid #000000;
-        width: 1000px;
-        height: 400px;
-        overflow: auto;
+        width: 500px;
+        height: 500px;
+        
 
-
-        margin: 50px auto;  /* 上下留 50px 空間，左右自動置中 */
+        font-size: 20px;
+        margin: 50px left;  /* 上下留 50px 空間，左右自動置中 */
         padding: 20px;  /* 內部增加 20px 間距，讓內容不要太貼近邊框 */
         background-color: #f9f9f9; /* 淡灰色背景，使表格更突出（可選） */
         border-radius: 10px; /* 圓角邊框，使畫面更柔和（可選） */
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 加入陰影讓表格更有立體感（可選） */
     }
+    
     table {
         width: 100%;
         border-collapse: collapse;
@@ -76,15 +78,17 @@
         font-weight: bold;
     }
 
+    .web-item a.clicked {
+        color: #ff4500; /* 自行調整顏色 */
+    }
+
     .japantravel{
 
         margin-top: 10px;
         font-size: 18px;
         
     }
-    .doro{
-        text-align: center;
-    }
+    
     
     .btn-red {
         font-size: 20px; /* 放大字體 */
@@ -94,6 +98,7 @@
         border: none; /* 移除邊框 */
         border-radius: 10px; /* 圓角邊框 */
         cursor: pointer; /* 滑鼠移過去變成手指 */
+        margin-bottom: 50px;
     }
 
     .btn-red:hover {
@@ -116,146 +121,52 @@
         </ul>
     </nav>
     
-    <h1>歌曲: RE I AM</h1>
-    <audio id="myAudio" src="RE_I_AM.mp3" controls loop></audio>
+    <h1>歌曲: 歐痛苦</h1>
+    <audio id="myAudio" src="歐痛苦.mp3" controls loop></audio>
     <button class="btn-red" id="playBtn">點我可以循環播放音樂</button>
     
     <div id="box" class="box">
         <table>
-            <thead>
-                <tr>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-green">交通方式</th>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-green">交通方式</th>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-green">交通方式</th>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-green">交通方式</th>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-blue">行程說明</th>
-                    <th class="header-blue">備註</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Day1</td>
-                    <td>Day1</td>
-                    <td>Day2</td>
-                    <td>Day2</td>
-                    <td>Day3</td>
-                    <td>Day3</td>
-                    <td>Day4</td>
-                    <td>Day4</td>
-                    <td>Day5</td>
-                    <td>Day6</td>
-                    <td>Day7</td>
-                    <td>Day5後備選擇</td>
-                </tr>
-                <tr>
-                    <td>桃園機場第一航廈</td>
-                    <td>飛機起飛</td>
-                    <td>動物園前站</td>
-                    <td>御堂筋線(紅色)地鐵</td>
-                    <td>通天閣</td>
-                    <td>堺筋線棕色地鐵</td>
-                    <td>動物園前站</td>
-                    <td>堺筋線棕色地鐵</td>
-                    <td>清水寺</td>
-                    <td>京都水族館</td>
-                    <td>起床趕車回機場</td>
-                    <td>八坂神社</td>
-                </tr>
-                <tr>
-                    <td>關西機場</td>
-                    <td>桃園飛往日本</td>
-                    <td>大國町站</td>
-                    <td>無</td>
-                    <td>四天王寺</td>
-                    <td>步行</td>
-                    <td>日本橋轉車往奈良</td>
-                    <td>近鐵奈良線</td>
-                    <td>一年坂~三年坂</td>
-                    <td>京都寶可夢中心</td>
-                    <td>無</td>
-                    <td>錦市場</td>
-                </tr>
-                <tr>
-                    <td>天王寺站</td>
-                    <td>大阪環狀線JR</td>
-                    <td>難波大阪神社</td>
-                    <td>步行</td>
-                    <td>天王寺動物園</td>
-                    <td>步行</td>
-                    <td>奈良公園</td>
-                    <td>步行</td>
-                    <td>花見小路</td>
-                    <td>買伴手禮</td>
-                    <td>無</td>
-                    <td>無</td>
-                </tr>
-                <tr>
-                    <td>大阪城公園</td>
-                    <td>無</td>
-                    <td>道頓堀(心齋橋)</td>
-                    <td>步行</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>東大寺</td>
-                    <td>步行</td>
-                    <td>伏見稻荷神社周邊</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>無</td>
-                </tr>
-                <tr>
-                    <td>天神橋筋商店街</td>
-                    <td>扇町(堺筋線棕色地鐵)</td>
-                    <td>黑門市場(晚餐)</td>
-                    <td>步行</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>回京都放行李</td>
-                    <td>奈良JR或者地鐵</td>
-                    <td>伏見稻荷吉伊卡哇</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>無</td>
-                </tr>
-                <tr>
-                    <td>飯店休息</td>
-                    <td>無</td>
-                    <td>飯店休息</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>敘敘宛燒肉</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>無</td>
-                    <td>無</td>
-                </tr>
-            </tbody>
+            <tr>
+                <th>日期</th>
+                <th>行程</th>
+            </tr>
+            <tr>
+                <td>第一天</td>
+                <td>天王寺站 -> 大阪城公園 -> 天神橋筋商店街 -> 飯店休息</td>
+            </tr>
+            <tr>
+                <td>第二天</td>
+                <td>動物園前站 -> 大國町站 -> 難波大阪神社 -> 道頓堀(心齋橋) -> 黑門市場(晚餐) -> 飯店休息</td>
+            </tr>
+            <tr>
+                <td>第三天</td>
+                <td>通天閣 -> 四天王寺 -> 天王寺動物園</td>
+            </tr>
+            <tr>
+                <td>第四天</td>
+                <td>動物園前站 -> 日本橋轉車往奈良 -> 奈良公園 -> 東大寺 -> 回京都放行李 -> 敘敘宛燒肉</td>
+            </tr>
+            <tr>
+                <td>第五天</td>
+                <td>清水寺 -> 一年坂~三年坂 -> 花見小路 -> 伏見稻荷神社 -> 伏見稻荷吉伊卡哇</td>
+            </tr>
+            <tr>
+                <td>第六天</td>
+                <td>京都水族館 -> 京都寶可夢中心 -> 買伴手禮</td>
+            </tr>
+            <tr>
+                <td>第七天</td>
+                <td>起床趕車回機場</td>
+            </tr>
         </table>
     </div>
-    <div id="doro" class="doro">
-        <img src="doro_act1.gif" alt="動態圖片" width="300">
-        <img src="doro_act1.gif" alt="動態圖片" width="300">
-        <img src="doro_act1.gif" alt="動態圖片" width="300">
-        <img src="doro_act1.gif" alt="動態圖片" width="300">
-    </div>
+    
     <!-- 3 行 2 列的圖片與超連結 -->
     <div id="web" class="web">
         <div class="web-item">
             <img src="大阪自由行.png" alt="大阪自由行">
             <a href="https://www.gltjp.com/zh-hant/article/item/20172/">大阪城周邊景點</a>
-        </div>
-
-        <div class="web-item">
-            <img src="大阪城周邊三十景點.png" alt="大阪城周邊三十景點">
-            <a href="https://www.kkday.com/zh-tw/blog/3525/asia-japan-osaka-must-visit">大阪城周邊三十景點統整</a>
         </div>
 
         <div class="web-item">
@@ -338,6 +249,47 @@
         audio.volume = 0.1; // 設定音量為 10%
         audio.play();
         });
+
+
+        // 封裝一個函式來更新連結狀態
+        function updateClickedLinks() {
+            let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
+            document.querySelectorAll('.web-item a').forEach(function(link) {
+            if (clickedLinks.indexOf(link.href) !== -1) {
+                link.classList.add('clicked');
+            } else {
+                link.classList.remove('clicked');
+            }
+            });
+        }
+
+        // 當頁面初次載入或從 BFCache 中恢復時都會觸發 pageshow 事件
+        window.addEventListener('pageshow', updateClickedLinks);
+
+        // 點擊事件處理
+        document.querySelectorAll('.web-item a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+            e.preventDefault(); // 暫停預設導向
+            const href = this.href;
+            let clickedLinks = JSON.parse(localStorage.getItem('clickedLinks')) || [];
+            const index = clickedLinks.indexOf(href);
+
+            if (index !== -1) {
+                clickedLinks.splice(index, 1);
+                this.classList.remove('clicked');
+            } else {
+                clickedLinks.push(href);
+                this.classList.add('clicked');
+            }
+            localStorage.setItem('clickedLinks', JSON.stringify(clickedLinks));
+
+            // 延遲 300 毫秒再導向，讓使用者看到顏色變化
+            setTimeout(() => {
+                window.location.href = href;
+            }, 300);
+            });
+        });
+
     </script>
 </body>
 </html>

@@ -18,7 +18,7 @@
         
 
         font-size: 20px;
-        margin: 50px left;  /* 上下留 50px 空間，左右自動置中 */
+        margin: 50px auto;  /* 上下留 50px 空間，左右自動置中 */
         padding: 20px;  /* 內部增加 20px 間距，讓內容不要太貼近邊框 */
         background-color: #f9f9f9; /* 淡灰色背景，使表格更突出（可選） */
         border-radius: 10px; /* 圓角邊框，使畫面更柔和（可選） */
@@ -37,14 +37,7 @@
     th {
         background-color: #f2f2f2;
     }
-    .header-blue {
-        background-color: #2d65dd;
-        color: white;
-    }
-    .header-green {
-        background-color: #2f815d;
-        color: white;
-    }
+    
 
     /* 圖片+超連結的區塊 */
     .web {
@@ -103,6 +96,28 @@
 
     .btn-red:hover {
         background-color: darkred; /* 滑鼠懸停時變深紅色 */
+    }
+
+
+    @media (max-width: 600px) {
+        /* 調整表格容器 */
+        .box {
+            width: 90%;      /* 使用百分比寬度 */
+            height: auto;    /* 自動高度，避免固定高度造成擠壓 */
+            margin: 20px auto;  /* 上下間距縮小，左右置中 */
+        }
+
+        /* 調整圖片區塊的排版 */
+        .web {
+            grid-template-columns: 1fr; /* 手機版採用一欄 */
+            width: 95%;
+        }
+
+        /* 讓圖片能夠自動縮放 */
+        .web-item img {
+            width: 100%;
+            height: auto;
+        }
     }
 </style>
 
